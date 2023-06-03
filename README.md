@@ -1,1 +1,1 @@
-# IP2-Group7
+# Integrated group project as part of Computing degree coursework
