@@ -1,0 +1,400 @@
+
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+@media screen and (max-width:1440px){
+    .hero h1{
+        font-size: 3.5rem;
+    }
+
+    .hero__left{
+        width: 60% !important;
+    }
+
+    .hero{
+        padding: 0 5%;
+    }
+
+    .crypto__search .container>div{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:1024px){
+    header nav{
+        margin: unset !important;
+        
+    }
+    
+    header nav ul{
+        justify-content: flex-end;
+        gap: 1rem !important;
+    }
+
+    header{
+        padding: 2rem 5%;
+        justify-content: space-between;
+    }
+
+    .hero{
+        background-position: 70%;
+    }
+
+    .viz-intro{
+        padding-top: 10vh;
+    }
+    button{
+        padding: .75rem 2rem !important;
+    }
+
+    section .container{
+        padding: 2rem 5%;
+    }
+    .viz-message{padding: 5rem 0;}
+    .viz-message p{width: 90%;}
+    .viz-row{flex-direction: column;}
+    .viz-row-reverse{flex-direction: column-reverse;}
+    .viz-row>div,
+    .viz-row-reverse>div{width: 100%;}
+    
+    .jobs__over--time{
+        height: 30rem !important;
+        overflow-x: auto;
+    }
+
+    .word-cloud{
+        overflow: hidden;
+    }
+
+    .stat__box{
+        width:45%
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .text-xl{
+        font-size: 20px !important;
+    }
+
+    .crypto__repeated{
+        width: 15rem !important;
+        padding: 1.5rem 2rem !important;
+    }
+
+    .crypto__repeated span.text-3xl{
+        font-size: 1.5rem !important;
+    }
+
+    .crypto__repeated span.text-xl{
+        margin-top: 0.75rem;
+    }
+
+    .crypto__info{
+        margin-top: 1.5rem !important;
+    }
+
+    .results__cryptos,
+    .sort__label{
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:768px){
+    .toggleContainer{
+        display: block !important;
+        position: relative;
+        margin-right: 1rem;
+    }
+
+    header nav{
+        position: absolute;
+        background-color: var(--color-lightblue);
+        right: 0;
+        top:0;
+        padding: 15vh 1rem 2rem;
+        width: 50%;
+        height: 50vh;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translate(100%, -100%);
+        transition: all ease-in-out .3s;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem !important;
+    }
+
+    header:has(input[type=checkbox]:checked) nav{
+        transform: translate(0, 0);
+
+    }
+
+    .hero{
+        flex-wrap: wrap;
+        height: auto !important;
+        justify-content: center !important;
+    }
+    .hero>div{
+        width: 29rem !important;
+        max-width: 100%;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+        margin-top: 15vh;
+    }
+
+    .hero__left>div{
+        margin-top: 3rem;
+    }
+
+    .section__title{
+        font-size: 1.75rem;
+    }
+
+    .cards__container,
+    .section4 .container{
+        flex-direction: column;
+    }
+
+    .section4 .container,
+    .section3 .container{gap: 5rem;}
+
+    .section3 .container>div,
+    .section4 .container>div,
+    .faq>div{
+        width: 100%;
+    }
+
+    .section4 .container span{
+        flex: 1;
+    }
+
+    .stat__box,
+    .viz-intro p,
+    .member>div,
+    .contact__container>div,
+    .contact__container>form,
+    .form__group>input, .form__group>textarea,
+    .success__message{
+        width: 100%;
+    }
+
+    .filters__btns{
+        gap: 1rem !important;
+    }
+
+    .filters__btns button{
+        font-size: .75rem;
+    }
+
+    .insights__desc>div{
+        width: 100% !important;
+        margin-bottom: 5rem;
+    }
+
+    .insights__desc{flex-wrap: wrap; gap: 0 !important;}
+    
+    .viz-intro {
+        height: auto!important;
+        padding-top: 15vh !important;
+    }
+
+    .viz-intro h1, .about__hero h1, .contact h1{font-size: 2.5rem !important;}
+    section{
+        padding: 2.5rem 5% !important;
+    }
+
+    .filters__btns,
+    .member{
+        flex-direction: column !important;
+    }
+
+    .viz-message p{
+        font-size: 20px;
+    }
+
+    .viz-chart{
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .viz-chart>div{
+        width: 50rem !important;
+    }
+
+    .contact>.contact__container,
+    .section3 .container{
+        flex-direction: column-reverse !important;
+    }
+
+    .contact__container{
+        width: 100% !important;
+        transform: translate(-50%, 0) !important;
+        border-radius: 0 !important;
+    }
+
+    .contact{padding-bottom: 0 !important;}
+    .contact__container span.text-2xl{font-size: 1.5rem;}
+
+    .viz-chart>div:has(.loader){
+        width: 100% !important;
+    }
+
+    .hero{
+        background-position: 50%;
+    }
+
+    .text-xl,
+    button{
+        font-size: 18px !important;
+    }
+    .faq__repeated .text-xl,
+    .faq__answer{
+        font-size: 14px !important;
+    }
+
+    .plus__container {
+        width: 1rem;
+        height: 1rem;
+        font-size: .65rem;
+    }
+
+    .faq .text-center{
+        text-align: left;
+    }
+
+    .faq__repeated--top{
+        padding-bottom: .5rem !important;
+      }
+
+      .source__section h1{
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .source__section h5{
+        margin-top: 1.5rem;
+        font-size: 1.15rem;
+      }
+
+      .source__section{
+        font-size: .85rem;
+      }
+
+      .source__section button{
+        margin-top: 2rem;
+        padding: .5rem 1rem !important;
+        font-size: .85rem !important;
+      }
+
+      .member__img img{
+        width: 100% !important;
+      }
+
+      .search__bar input{
+        margin: unset;
+      }
+
+      .filter__value{
+        width: 5rem;
+      }
+
+      .search__bar{
+        top: 13vh;
+        padding: .5rem;
+      }
+
+      .search__bar input{
+        max-width: 65% !important;
+      }
+
+      .crypto__repeated{
+        width: 100% !important;
+      }
+
+      .filter__list{
+        width: 10rem;
+        left: unset;
+        right: 0;
+      }
+
+      .crypto__search{
+        padding-top: 13vh;
+      }
+
+}
